@@ -1,3 +1,5 @@
 FROM continuumio/miniconda3
 
-SHELL ["conda", "create", "-n", "bit", "-c", "conda-forge", "-c", "bioconda", "-c", "defaults", "-c", "astriomike", "bit"]
+RUN conda install -c conda-forge mamba
+
+# SHELL ["mamba", "create", "-n", "bit", "-c", "conda-forge", "-c", "bioconda", "-c", "defaults", "-c", "astriomike", "bit", "-y"]
